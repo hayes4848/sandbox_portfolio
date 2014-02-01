@@ -1,0 +1,54 @@
+li{
+	padding-right: 10px;
+	display: inline;
+	font-size: 25px;
+	color:#770ACC;
+}
+li:hover{
+	color:#770ACC;
+}
+li:visited{color:#770ACC;}
+
+.back_lay{
+	border: 2px solid black;
+	width: 73%;
+	background-color: white;
+	float:left;
+	height:90%;
+}
+
+body{
+	background-image: url('green-wall.jpg');
+	background-size: 100%;
+}
+
+#copyright{
+	color:#B24A12;
+	font-size: 18px;
+	width: 100%;
+	float:left;
+	text-align: center;
+	
+
+}
+
+.advert{
+		border: 2px solid black;
+	width: 23%;
+	background-color: white;
+	float:right;
+	height:90%;
+	position:fixed;
+	clear:both;
+	margin-left: 75%;
+}
+
+nav{
+	text-align: center;
+
+}
+
+.text_body{
+	padding:10px;
+	
+}

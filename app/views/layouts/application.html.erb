@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Portfolio</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+	<header><%= render 'layouts/nav_bar' %></header>
+	<div class="back_lay">
+
+<%= yield %>
+	</div>
+	<div class="advert">
+		<p>this is text</p>
+	</div>
+	<footer> <p id="copyright">&copy; <%= Time.now.year %>  Andrew Hayes</p></footer>
+</body>
+</html>
