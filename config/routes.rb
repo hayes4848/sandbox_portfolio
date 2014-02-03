@@ -5,7 +5,9 @@ Portfolio::Application.routes.draw do
   #get "static_pages/About"
   get "/about", to: "static_pages#About", as:  :about
 
-  resources :blogs
+  resources :blogs do
+    post 'comments', to: "blogs#create_comment", as: :comments
+  end
 
   root to:'static_pages#Home'
 

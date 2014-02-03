@@ -26,5 +26,21 @@
 </p>
 
 
+
+<h3> Add a Comment</h3>
+  <%= render 'blogs/comments_form' %>
+
+  <% @blog.comments.each do |comment| %>
+  <h4>
+    <%= comment.author %>
+    <small> <%= time_tag(comment.created_at) if comment.created_at %> </small>
+  </h4>
+  <%= simple_format(comment.message) %>
+  <hr />
+<% end %>
+
+
+
+
 <%= link_to 'Edit', edit_blog_path(@blog) %> |
 <%= link_to 'Back', blogs_path %>

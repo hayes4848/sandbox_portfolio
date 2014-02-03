@@ -16,7 +16,7 @@ class BlogsController < ApplicationController
   # GET /blogs/1.json
   def show
     @blog = Blog.find(params[:id])
-    
+     @comment = @blog.comments.new
 
     respond_to do |format|
       format.html # show.html.erb
@@ -35,6 +35,22 @@ class BlogsController < ApplicationController
       format.json { render json: @blog }
     end
   end
+
+  def create_comment
+     @blog = Blog.find(params[:blog_id])
+     @comment = @blog.comments.new(params[:comment])
+    respond_to do |format|
+      if @blog.save
+        format.html { redirect_to @blog, notice: 'Comment was successfully created.' }
+        format.json { render json: @blog, status: :created, location: @blog }
+      else
+        format.html { render action: "show" }
+        format.json { render json: @blog.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+
+
 
   # GET /blogs/1/edit
   def edit

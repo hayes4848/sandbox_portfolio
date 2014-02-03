@@ -1,0 +1,19 @@
+<article>
+  <h2>
+    <%= link_to blog.title, blog %>
+    <small>by <%= blog.author %></small>
+    <% if blog.featured? %>
+      <strong>FEATURED POST</strong>
+    <% end %>
+  </h2>
+  <%= link_to 'Show', blog %>
+  <%= link_to 'Edit', edit_blog_path(blog) %>
+  <%= link_to 'Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' } %>
+  <p>
+    <%= blog.body %>
+  </p>
+
+  <h3 id="comments"> <%= link_to "Comments (#{blog.comments.count})", blog_path(blog) + '#comments' %> </h3>
+
+</article>
+
