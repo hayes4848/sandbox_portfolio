@@ -1,17 +1,17 @@
 
 <h1>Andy's Blog</h1>
 
-<%= link_to 'New Blog', new_blog_path %>
+<%= link_to 'New Blog', new_blog_path %><br/>
 <% @blogs.each do |blog| %>
   
-    <%= blog.title %>
-    <%= blog.author %>
-    <%= blog.body %>
-    <%= blog.published_at %>
+    <%= blog.title %><br/>
+    <%= blog.author %><br/>
+    <%= blog.body %><br/>
+    <%= blog.published_at %><br/>
     <%= blog.featured %>
     <%= link_to 'Show', blog %>
     <%= link_to 'Edit', edit_blog_path(blog) %>
-    <%= link_to 'Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' } %>
+    <%= link_to 'Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' } %><br/>
 <% end %>
 
 
