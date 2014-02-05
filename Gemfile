@@ -14,11 +14,11 @@ gem 'rails', '3.2.16'
 #  gem 'sqlite3'
 # end
 
- group :production
+ 
  gem 'pg'
-end
 
-ruby '2.0.0'
+
+ruby '2.1.0'
 
 # Gems used only for assets and not required
 # in production environments by default.
