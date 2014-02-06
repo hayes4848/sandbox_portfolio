@@ -1,10 +1,10 @@
 
 <h1>Andy's Blog</h1>
 
-<%= link_to 'New Blog', new_blog_path %><br/>
+<div class="new_blog"><%= link_to 'New Blog Post', new_blog_path %></div><br/>
 <% @blogs.each do |blog| %>
   
-    <%= blog.title %><br/>
+    <h2 class="title"><%= blog.title %></h2><br/>
     <%= blog.author %><br/>
     <%= blog.body %><br/>
     <%= blog.published_at %><br/>

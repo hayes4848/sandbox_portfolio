@@ -60,3 +60,12 @@ body{
 nav{
 	text-align: center;
 }
+
+.title{
+	color:orange;
+}
+.new_blog{
+	font-size: 20px;
+	color:black;
+	list-style: none;
+}

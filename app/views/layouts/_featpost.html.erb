@@ -1,5 +1,6 @@
 <div >
-		<h2 class="feat_title">Featured Post</h2>
+		<h2 class="feat_title">Featured Post </h2>
+		<h3> <%= link_to "Comments (#{@blogs.comments.count})", blogs_path(@blogs) + '#comments' %> </h3>
 		<h3><%= @blogs.title %></h3>
 		<%= @blogs.author %> <br/>
 		<%=simple_format(truncate(@blogs.body, length:300,  omission:"...#{link_to 'Continue Reading', blog_path(@blogs.id)}")) %>

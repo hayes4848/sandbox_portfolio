@@ -34,6 +34,14 @@ end
 
 gem 'jquery-rails'
 
+
+group :development do
+	gem 'better_errors'
+	gem 'pry-rails'
+	gem 'binding_of_caller'
+	gem 'meta_request'
+	gem 'xray-rails'
+end
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
