@@ -4,6 +4,6 @@ class Blog < ActiveRecord::Base
 has_many :comments
 
 validates :author, :title, :body, presence:true
-validates :title, length:{in: 6..72}
+#validates :title, length:{in: 6..72}
 
 end

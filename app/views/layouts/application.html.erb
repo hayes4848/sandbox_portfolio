@@ -8,6 +8,9 @@
 </head>
 <body>
 	<header><%= render 'layouts/nav_bar' %></header>
+	<% flash.each do |name, msg| %>
+	<%= content_tag :div, msg, class: name %>
+	<% end %>
 	<div class="back_lay">
 
 <%= yield %>

@@ -1,5 +1,11 @@
 Portfolio::Application.routes.draw do
-  get "/home", to:  "static_pages#Home", as:  :home
+  resources :users
+  get "/sign-up", to: "users#new", as: :sign_up
+  get "/sign-in", to: "sessions#new", as: :sign_in
+  post "/sign-in", to: "sessions#create", as: :create_session
+
+
+  get "/home", to: "static_pages#Home", as:  :home
 
   
   #get "static_pages/About"

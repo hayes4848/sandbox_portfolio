@@ -9,7 +9,7 @@
     <%= blog.body %><br/>
     <%= blog.published_at %><br/>
     <%= blog.featured %>
-    <%= link_to time_ago_in_words(blog.created_at) + " ago," blog %>
+    <%= link_to time_ago_in_words(blog.created_at) + " ago", blog %>
     <%= link_to 'Edit', edit_blog_path(blog) %>
     <%= link_to 'Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' } %><br/>
 <% end %>
