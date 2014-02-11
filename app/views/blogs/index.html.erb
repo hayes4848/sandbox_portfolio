@@ -1,12 +1,19 @@
 
-<h1>Andy's Blog</h1>
-
 <div class="new_blog"><%= link_to 'New Blog Post', new_blog_path %></div><br/>
+
+<div class="col-md-8 blog_post">
+ 	<p>blah blah blah</p>
+
+
+</div>
+
+<div class="col-md-4 blog_list">
+
 <% @blogs.each do |blog| %>
   
     <h2 class="title"><%= blog.title %></h2><br/>
     <%= blog.author %><br/>
-    <%= blog.body %><br/>
+    <%= simple_format(blog.body) %><br/>
     <%= blog.published_at %><br/>
     <%= blog.featured %>
     <%= link_to time_ago_in_words(blog.created_at) + " ago", blog %>
@@ -18,3 +25,4 @@
 
 <br />
 
+</div>

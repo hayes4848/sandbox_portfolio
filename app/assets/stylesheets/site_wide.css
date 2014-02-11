@@ -1,4 +1,4 @@
-li{
+/*li{
 	margin-right: 40px;
 	margin-bottom: 20px;
 	display: inline;
@@ -15,7 +15,7 @@ li{
 li:hover{
 	color:#770ACC;
 }
-li:visited{color:#770ACC;}
+li:visited{color:#770ACC;}*/
 
 .back_lay{
 	border: 2px solid black;
@@ -28,23 +28,21 @@ li:visited{color:#770ACC;}
 }
 
 body{
-	background-image: url('green-wall.jpg');
+	background-image: url('COMPUTER.jpg');
 	background-size: 100%;
 	text-align: center;
-
 }
 
-#copyright{
+
+/*#copyright{
 	color:#B24A12;
 	font-size: 18px;
 	width: 100%;
 	float:left;
 	text-align: center;
-	
+}*/
 
-}
-
-.advert{
+/*.advert{
 	border: 2px solid black;
 	border-radius: 15px;
 	width: 23%;
@@ -55,17 +53,63 @@ body{
 	clear:both;
 	margin-left: 75%;
 	box-shadow:10px 10px 5px #000000;
-}
+}*/
 
 nav{
 	text-align: center;
 }
 
-.title{
+/*.title{
 	color:orange;
-}
+}*/
 .new_blog{
 	font-size: 20px;
 	color:black;
 	list-style: none;
+}
+
+footer {
+		background-color: #2b2b2b;
+		padding-bottom: 20px;
+		width: 100%;
+		clear: both;
+		
+
+
+		p {
+	font-size: 20px;
+	color:white;
+	padding-bottom: 30px;
+	}
+}
+.purple{
+	color:#e45fec;
+}
+.body_p{
+
+	color:white;
+	font-size: 40px;
+	margin-top: 150px;
+	margin-bottom: 150px;
+}
+
+.stupid{
+	min-height: 90%;
+}
+
+.blog_list{
+	background-color: lighten(#2b2b2b, 20%);
+	color: white;
+	max-height: 500px;
+	overflow-y:auto;
+	
+}
+
+.blog_post{
+	background-color: white;
+	color: black;
+	height: 500px;
+	overflow-y:auto;
+
+	
 }

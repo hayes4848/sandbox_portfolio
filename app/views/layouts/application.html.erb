@@ -1,24 +1,30 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <title>Portfolio</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+	<div class="container-fluid">
 	<header><%= render 'layouts/nav_bar' %></header>
 	<% flash.each do |name, msg| %>
 	<%= content_tag :div, msg, class: name %>
 	<% end %>
-	<div class="back_lay">
-
+	
+	<div class="stupid">
 <%= yield %>
 	</div>
-	<div class="advert">
-		<p>this is text</p>
+	
+		<%= render 'layouts/footer' %>
+
+	
 	</div>
-	<footer> <p id="copyright">&copy; <%= Time.now.year %>  Andrew Hayes|<%= Rails.env %></p>
-	</footer>
 </body>
 </html>
