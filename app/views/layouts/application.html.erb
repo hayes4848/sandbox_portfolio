@@ -12,19 +12,14 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-	<div class="container-fluid">
 	<header><%= render 'layouts/nav_bar' %></header>
+	<div class="container-fluid">
 	<% flash.each do |name, msg| %>
 	<%= content_tag :div, msg, class: name %>
 	<% end %>
 	
-	<div class="stupid">
 <%= yield %>
 	</div>
-	
-		<%= render 'layouts/footer' %>
-
-	
-	</div>
+	<%= render 'layouts/footer' %>
 </body>
 </html>
