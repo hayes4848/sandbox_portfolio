@@ -107,6 +107,7 @@ footer {
 	color: black;
 	height: 460px;
 	overflow-y:auto;
-
-	
+}
+.padding{
+	margin-bottom: 70px;
 }
