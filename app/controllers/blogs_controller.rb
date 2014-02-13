@@ -1,4 +1,6 @@
 class BlogsController < ApplicationController
+    before_filter :authorize, only:[:create, :new, :edit, :destroy, :update]
+
   # GET /blogs
   # GET /blogs.json
   def index

@@ -3,9 +3,8 @@ Portfolio::Application.routes.draw do
   get "/sign-up", to: "users#new", as: :sign_up
   get "/sign-in", to: "sessions#new", as: :sign_in
   post "/sign-in", to: "sessions#create", as: :create_session
-
-
   get "/home", to: "static_pages#Home", as:  :home
+  delete "/sign-out", to: "sessions#destroy", as: :sign_out
 
   
   #get "static_pages/About"

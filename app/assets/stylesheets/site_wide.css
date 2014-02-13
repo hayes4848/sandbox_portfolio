@@ -1,32 +1,4 @@
-/*li{
-	margin-right: 40px;
-	margin-bottom: 20px;
-	display: inline;
-	font-size: 25px;
-	color:#770ACC;
-	background-color: #55FF26;
-	padding-left: 10px;
-	padding-right: 10px;
-	box-shadow:10px 10px 5px #000000;
-	border: solid 2px #55FF26;
-	border-radius: 20px;
-	
-}
-li:hover{
-	color:#770ACC;
-}
-li:visited{color:#770ACC;}*/
 
-/*.back_lay{
-	border: 2px solid black;
-	border-radius: 15px;
-	width: 73%;
-	background-color: white;
-	float:left;
-	height:90%;
-	box-shadow:10px 10px 5px #000000;
-}
-*/
 body{
 	background-image: url('COMPUTER.jpg');
 	background-size: 100%;
@@ -34,35 +6,10 @@ body{
 	height: 100%;
 }
 
-
-/*#copyright{
-	color:#B24A12;
-	font-size: 18px;
-	width: 100%;
-	float:left;
-	text-align: center;
-}*/
-
-/*.advert{
-	border: 2px solid black;
-	border-radius: 15px;
-	width: 23%;
-	background-color: white;
-	float:right;
-	height:90%;
-	position:fixed;
-	clear:both;
-	margin-left: 75%;
-	box-shadow:10px 10px 5px #000000;
-}*/
-
 nav{
 	text-align: center;
 }
 
-/*.title{
-	color:orange;
-}*/
 .new_blog{
 	font-size: 20px;
 	color:black;
