@@ -1,7 +1,8 @@
 
 body{
 	background-image: url('COMPUTER.jpg');
-	background-size: 100%;
+	background-position: center top;
+    background-size: 100% auto;
 	text-align: center;
 	height: 100%;
 }

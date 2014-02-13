@@ -16,6 +16,7 @@ gem 'rails', '3.2.16'
 
  
  gem 'pg'
+ gem 'simple_form'
 
 
 ruby '2.1.0'
