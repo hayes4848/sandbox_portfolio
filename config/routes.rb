@@ -1,4 +1,7 @@
 Portfolio::Application.routes.draw do
+  resources :contact_messages
+
+
   resources :users
   get "/sign-up", to: "users#new", as: :sign_up
   get "/sign-in", to: "sessions#new", as: :sign_in

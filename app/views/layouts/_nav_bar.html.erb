@@ -34,6 +34,7 @@
         <li class="home_link"><%= link_to 'Home', "/home" %></li>
 		    <li class="about_link"><%= link_to 'About', "/about" %></li>
 		    <li class="blog_link"><%= link_to 'Blog', blogs_path  %></li>
+        <li class="blog_link"><%= link_to 'Contact Us', new_contact_message_path  %></li>
 		  <% if current_user %>
         <li><%= link_to [current_user.first_name].join(' '), edit_user_path(current_user) %></li>
         <li class=""><%= link_to 'Log Out', sign_out_path, method: :delete %></li>
