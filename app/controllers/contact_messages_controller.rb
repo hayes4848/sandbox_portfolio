@@ -43,10 +43,10 @@ class ContactMessagesController < ApplicationController
     @contact_message = ContactMessage.new(params[:contact_message])
 
     respond_to do |format|
-      if @contact_message.save
+      if @contact_message.valid?
         ContactMailer.contact_me(@contact_message).deliver
-        format.html { redirect_to @contact_message, notice: 'Contact message was successfully created.' }
-        format.json { render json: @contact_message, status: :created, location: @contact_message }
+        format.html { redirect_to home_path, notice: 'Contact message was successfully created.' }
+        format.json { render json: @contact_message, status: :created, location: home_path }
       else
         format.html { render action: "new" }
         format.json { render json: @contact_message.errors, status: :unprocessable_entity }

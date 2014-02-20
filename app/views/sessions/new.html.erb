@@ -1,15 +1,25 @@
-<h1> Sign In </h1>
+<div class='row'>
+  <div class='col-sm-6 col-sm-offset-3'>
+    <div class=''>
+      <h1 class='text-center'> Sign In </h1>
+   <h1> Sign In </h1>
 
 <%= form_tag create_session_path do %>
-	<div class="field">
-		<%= label_tag :email%>
-		<%= text_field_tag :email %><br/>
-	</div>
-	<div class="field">
-		<%= label_tag :password%>
-		<%= password_field_tag :password %><br/>
-	</div>
+<div class="field">
+<%= label_tag :email%>
+<%= text_field_tag :email %><br/>
+</div>
+<div class="field">
+<%= label_tag :password%>
+<%= password_field_tag :password %><br/>
+</div>
 
-	<%= submit_tag "LUNICORN!" %>
-	<% end %>
+<%= submit_tag "LUNICORN!" %>
+<% end %>
+
+
+    </div>
+  </div>
+</div>
+
 

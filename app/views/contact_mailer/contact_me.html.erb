@@ -1,2 +1,15 @@
-<h1>Contact Mailer</h1>
+
+<head>
+<title><%= headers[:subject] %></title>
+</head>
+<body>
+	<h1>Contact Mailer</h1>
+	<ul>
+		<li>Topic: <%= @contact_message.topic %></li>
+		<li>Body: <%= @contact_message.body %></li>
+	</ul>	
+
+
+</body>
+
 
