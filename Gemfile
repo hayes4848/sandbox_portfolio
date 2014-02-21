@@ -17,6 +17,7 @@ gem 'rails', '3.2.16'
  
  gem 'pg'
  gem 'simple_form'
+ gem "paperclip", "~> 3.0"
 
 
 ruby '2.1.0'

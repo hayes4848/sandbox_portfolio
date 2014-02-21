@@ -7,7 +7,7 @@
         <%= f.input :name %>
         <%= f.input :email %>
         <%= f.input :subject %>
-        <%= f.input :body %>
+        <%= f.input :body, as: :text %>
         <%= f.input :topic, collection:[["Customer Service"],["Technical Support"],["Returns"]] %>
       </div>
 

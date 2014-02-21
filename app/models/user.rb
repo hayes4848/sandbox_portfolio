@@ -1,7 +1,8 @@
 class User < ActiveRecord::Base
   has_secure_password
-  attr_accessible :email, :first_name, :last_name, :password, :password_confirmation
-  validates :email, :first_name, :last_name, :password, :password_confirmation, presence:true
+  attr_accessible :email, :first_name, :last_name, :password, :password_confirmation, :profile_picture
+  has_attached_file :profile_picture, styles: {large: "600x600>", medium: "300x300>", thumb: "50x50>"}, :default_url => "/assets/images/default.png"
+  validates :email, :first_name, :last_name, :password, :password_confirmation, presence:true, on: :create
   
   after_create :send_welcome_email
 
