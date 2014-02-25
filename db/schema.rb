@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140221000804) do
+ActiveRecord::Schema.define(:version => 20140225020352) do
 
   create_table "blogs", :force => true do |t|
     t.string   "title"
@@ -42,6 +42,27 @@ ActiveRecord::Schema.define(:version => 20140221000804) do
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
+
+  create_table "projects", :force => true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.string   "project_picture_file_name"
+    t.string   "project_picture_content_type"
+    t.integer  "project_picture_file_size"
+    t.datetime "project_picture_updated_at"
+    t.datetime "created_at",                   :null => false
+    t.datetime "updated_at",                   :null => false
+  end
+
+  create_table "tags", :force => true do |t|
+    t.string   "name"
+    t.integer  "taggable_id"
+    t.string   "taggable_type"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
+  end
+
+  add_index "tags", ["taggable_id"], :name => "index_tags_on_taggable_id"
 
   create_table "users", :force => true do |t|
     t.string   "email"

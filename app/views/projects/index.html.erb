@@ -1,0 +1,19 @@
+<h1>My Projects</h1>
+
+
+
+<% @projects.each do |project| %>
+  
+    <%= project.name %><br/>
+    <%= project.description %><br/>
+    <%= project.project_picture %><br/>
+
+    <%= link_to 'Show', project %>
+    <%= link_to 'Edit', edit_project_path(project) %>
+    <%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %>
+  
+<% end %>
+
+<br />
+
+<%= link_to 'New Project', new_project_path %>
