@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140225020352) do
+ActiveRecord::Schema.define(:version => 20140227224010) do
 
   create_table "blogs", :force => true do |t|
     t.string   "title"
@@ -43,6 +43,30 @@ ActiveRecord::Schema.define(:version => 20140225020352) do
     t.datetime "updated_at", :null => false
   end
 
+  create_table "pictures", :force => true do |t|
+    t.string   "title"
+    t.integer  "pictureable_id"
+    t.string   "pictureable_type"
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+  end
+
+  add_index "pictures", ["pictureable_id"], :name => "index_pictures_on_pictureable_id"
+
+  create_table "project_pictures", :force => true do |t|
+    t.integer  "picable_id"
+    t.string   "picable_type"
+    t.string   "name"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+  end
+
+  add_index "project_pictures", ["picable_id"], :name => "index_project_pictures_on_picable_id"
+
   create_table "projects", :force => true do |t|
     t.string   "name"
     t.text     "description"
@@ -63,6 +87,15 @@ ActiveRecord::Schema.define(:version => 20140225020352) do
   end
 
   add_index "tags", ["taggable_id"], :name => "index_tags_on_taggable_id"
+
+  create_table "tools", :force => true do |t|
+    t.string   "name"
+    t.integer  "project_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "tools", ["project_id"], :name => "index_tools_on_project_id"
 
   create_table "users", :force => true do |t|
     t.string   "email"

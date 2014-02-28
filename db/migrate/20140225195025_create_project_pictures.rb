@@ -1,7 +1,7 @@
 class CreateProjectPictures < ActiveRecord::Migration
   def change
     create_table :project_pictures do |t|
-      t.references :picable
+      t.references :picable, polymorphic: true
       t.string :name
 
       t.timestamps
