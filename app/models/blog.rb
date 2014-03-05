@@ -6,5 +6,5 @@ has_many :tags, as: :taggable
 
 validates :author, :title, :body, presence:true
 #validates :title, length:{in: 6..72}
-
+default_scope -> {order('created_at ASC')}
 end

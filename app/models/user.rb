@@ -7,7 +7,7 @@ class User < ActiveRecord::Base
   			medium: "300x300>", 
   			thumb: "50x50>"}, 
   		:default_url => "/assets/default.png"
-  validates :email, :first_name, :last_name, :password, :password_confirmation, presence:true, on: :create
+ # validates :email, :first_name, :last_name, :password, :password_confirmation, presence:true, on: :create
   
   after_create :send_welcome_email
 

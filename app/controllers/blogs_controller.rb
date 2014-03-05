@@ -11,6 +11,7 @@ class BlogsController < ApplicationController
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @blogs }
+      format.js
     end
   end
 
@@ -23,6 +24,7 @@ class BlogsController < ApplicationController
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @blog }
+      format.js
     end
   end
 
