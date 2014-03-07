@@ -19,6 +19,7 @@ gem 'rails', '3.2.16'
  gem 'simple_form'
  gem "paperclip", "~> 3.0"
  gem "cocoon"
+ gem 'jquery-rails'
 
 
 ruby '2.1.0'
@@ -38,7 +39,7 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
-gem 'jquery-rails'
+
 
 
 group :development do
