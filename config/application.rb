@@ -60,5 +60,14 @@ module Portfolio
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
+
+    config.paperclip_defaults = { storage: :s3,
+        s3_credentials:{
+            bucket: "",
+            access_key_id: "",
+            secret_access_key: ""
+            }
+        }
+
   end
 end

@@ -20,6 +20,8 @@ gem 'rails', '3.2.16'
  gem "paperclip", "~> 3.0"
  gem "cocoon"
  gem 'jquery-rails'
+ gem 'aws-sdk'
+ gem 'rolify'
 
 
 ruby '2.1.0'
@@ -30,6 +32,7 @@ group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
   gem 'bootstrap-sass', '~> 3.1.0'
+ 
  
 
 
@@ -58,6 +61,8 @@ group :development do
   gem 'letter_opener'
   gem 'guard'
   gem 'guard-livereload'
+  
+
 end
 # To use ActiveModel has_secure_password
 gem 'bcrypt-ruby', '~> 3.0.0'
