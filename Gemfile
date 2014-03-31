@@ -22,6 +22,7 @@ gem 'rails', '3.2.16'
  gem 'jquery-rails'
  gem 'aws-sdk'
  gem 'rolify'
+ gem 'rails_12factor'
 
 
 ruby '2.1.0'
